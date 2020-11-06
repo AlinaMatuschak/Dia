@@ -1,0 +1,95 @@
+.slider {
+  position: relative;
+  width: 687px;
+  height: 680px;
+  border-top-left-radius: 200px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+
+  &__slide {
+    display: none;
+    height: inherit;
+    width: 100%;
+
+    &--fade {
+      animation-name: fade;
+      animation-duration: 2s;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: inherit;
+  }
+
+  &__switch {
+    position: absolute;
+    bottom: 48px;
+    left: 44px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+  }
+
+  &__button {
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+    color: $text-dark;
+    background-color: #fff;
+    border-width: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    @include hover(opacity, 0.8);
+  }
+
+  &__inf {
+    width: 200px;
+    margin-left: 24px;
+  }
+
+  &__intro {
+    margin-bottom: 8px;
+    @extend %titleBold;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  &__recommend {
+    @extend %textNormal;
+    font-size: 14px;
+  }
+
+  @media (max-width: 1269px) {
+    width: 100%;
+    border-radius: 0 0 0 200px;
+
+    &__switch {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 783px) {
+    border-radius: 0;
+
+    &__inf {
+      display: none;
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.7;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

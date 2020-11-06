@@ -1,0 +1,39 @@
+@import "reset";
+@import "utils";
+@import "fonts";
+@import "typography";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $c-gray;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@import "./blocks/main";
+@import "./blocks/header";
+@import "./blocks/navigation";
+@import "./blocks/home";
+@import "./blocks/slider";
+@import "./blocks/intro";
+@import "./blocks/expertise";
+@import "./blocks/service";
+@import "./blocks/striving";
+@import "./blocks/comments";
+@import "./blocks/applying";
+@import "./blocks/contact-us";
+@import "./blocks/form";
+@import "./blocks/footer";

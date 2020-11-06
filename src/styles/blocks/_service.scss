@@ -1,0 +1,157 @@
+.service {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 0 60px;
+  color: $text-normal-color;
+
+  &__article {
+    margin: auto 226px auto 0;
+    max-width: 362px;
+  }
+
+  &__hint {
+    display: block;
+    margin-bottom: 16px;
+    color: $hint-color;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    color: $text-dark;
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  &__text {
+    margin-bottom: 14px;
+    font-size: 14px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: $service-cards-height;
+    width: $service-cards-width;
+    transform: translateY(120px);
+  }
+
+  &__card {
+    width: $service-card-size;
+    height: $service-card-size;
+    margin: $service-card-margin;
+    padding: 35px 32px;
+    background-color: #fff;
+    border-radius: 24px;
+    z-index: 1;
+    @include hover(transform, scale(1.1));
+
+    &--blue {
+      @include colorServiceCard($cards-first-color,  rgba(86, 204, 242, 0.1));
+    }
+
+    &--yellow {
+      @include colorServiceCard($cards-second-color,  rgba(252, 201, 29, 0.1));
+    }
+
+    &--green {
+      @include colorServiceCard($cards-third-color, rgba(21, 216, 80, 0.1));
+    }
+
+    &--red {
+      @include colorServiceCard($cards-fourth-color, rgba(243, 99, 99, 0.1));
+    }
+
+    &--last {
+      order: 1;
+    }
+
+    &:first-child {
+      margin-top: $service-card-size / 2;
+    }
+  }
+
+  &__num {
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 11px;
+    padding: 2px 11px;
+    border-radius: 23px;
+  }
+
+  &__kinds {
+    margin-bottom: 32px;
+    font-size: 13px;
+    line-height: 1.5;
+    @extend %titleSemiBold;
+    list-style: none;
+  }
+
+  &__button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url("/images/arrow.png") center no-repeat;
+    background-color: rgb(53, 21, 21);
+    border-width: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    @include hover(transform, scale(1.1));
+
+    &::after {
+      content: "Learn more";
+      position: absolute;
+      top: 10px;
+      left: 120%;
+      width: 90px;
+      font-size: 15px;
+      color: $text-dark;
+    }
+  }
+
+  @media (min-width: 1900px) {
+    &__article {
+      margin-right: 300px;
+      max-width: 1500px;
+    }
+  }
+
+  @media (max-width: 1269px) {
+    flex-wrap: wrap;
+    padding-top: 148px;
+
+    &__article {
+      margin: 0;
+      max-width: 563px;
+    }
+
+    &__cards {
+      height: 590px;
+      transform: translateY(68px);
+    }
+
+    &__card {
+      &:first-child {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 712px) {
+    &__cards {
+      align-items: center;
+      height: auto;
+      width: auto;
+    }
+
+    &__card {
+      &--last {
+        order: 0;
+      }
+    }
+  }
+}
