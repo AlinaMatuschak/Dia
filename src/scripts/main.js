@@ -1,0 +1,2 @@
+import './buttonsLogic';
+import './slider';

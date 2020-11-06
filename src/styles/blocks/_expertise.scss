@@ -1,0 +1,64 @@
+.expertise {
+  padding: $block-ver-padding 20px;
+  color: $text-dark;
+  text-align: center;
+  background-color: #fff;
+
+  &__title {
+    margin-bottom: 60px;
+    font-size: 52px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__card {
+    width: 270px;
+    padding: 5px;
+    margin: 0 20px;
+  }
+
+  &__img {
+    width: 166px;
+    height: 166px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+  }
+
+  &__kind {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__explanation {
+    font-size: 14px;
+    color: $text-normal-color;
+  }
+
+  @media (min-width: 1900px) {
+    &__cards {
+      max-width: 1600px;
+    }
+  }
+
+  @media (max-width: 1269px) {
+    &__cards {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__card {
+      padding-bottom: 30px;
+    }
+
+    &__img {
+      margin-bottom: 20px;
+    }
+  }
+}

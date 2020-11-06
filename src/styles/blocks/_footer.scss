@@ -1,0 +1,30 @@
+.footer {
+  height: $footer-height;
+  padding: 0 220px;
+  background-color: $footer-color;
+
+  &__wrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  &__link-logo {
+    @include hover(opacity, 0.8);
+  }
+
+  @media (max-width: 1269px) {
+    padding: 0 10vw;
+
+    &__wrp {
+      justify-content: center;
+    }
+
+    &__nav {
+      display: none;
+    }
+  }
+}

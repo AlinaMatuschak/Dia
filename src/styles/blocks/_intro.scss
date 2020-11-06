@@ -1,0 +1,20 @@
+.intro {
+  padding: $block-ver-padding 0;
+  max-width: 730px;
+
+  &__title {
+    margin-bottom: 16px;
+    color: $text-dark;
+    font-size: 32px;
+  }
+
+  &__text {
+    color: $text-normal-color;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  @media (max-width: 799px) {
+    padding: $block-ver-padding 20px;
+  }
+}

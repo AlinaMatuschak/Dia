@@ -1,0 +1,46 @@
+@mixin hover($_property, $_toValue) {
+  transition: #{$_property} 0.3s;
+  &:hover {
+    #{$_property}: $_toValue;
+  }
+}
+
+@mixin button {
+  width: 226px;
+  height: 56px;
+
+  font-size: 15px;
+  color: $text-light;
+
+  background-color: $main-color;
+  border-width: 0;
+  border-radius: 64px;
+
+  cursor: pointer;
+  @include hover(background-color, $button-hover);
+
+  @media (min-width: 1900px) {
+    font-size: 18px;
+  }
+}
+
+@mixin colorServiceCard($color, $colorBG) {
+  .service__num {
+    color: #{$color};
+    background-color: #{$colorBG};
+  }
+
+  .service__button {
+    background-color: #{$color};
+  }
+}
+
+@mixin decorativeGradientOnHover($bi) {
+  transition: transform 0.5s;
+
+  &:hover {
+    border-width: 0;
+    transform: rotate(-65deg) scale(1.2);
+    background-image: #{$bi};
+  }
+}

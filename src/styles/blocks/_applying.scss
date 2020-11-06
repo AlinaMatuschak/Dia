@@ -1,0 +1,153 @@
+.applying {
+  position: relative;
+  padding: 199px 20px;
+  text-align: center;
+  line-height: 1.5;
+  background-color: $applying-color;
+
+  &__title {
+    margin-bottom: 24px;
+    color: $text-dark;
+    font-size: 52px;
+  }
+
+  &__text {
+    display: block;
+    max-width: 750px;
+    margin: 0 auto 64px;
+    color: $text-normal-color;
+    font-size: 24px;
+    @extend %textSemiBold;
+  }
+
+  &__button {
+    @include button;
+  }
+
+  &__decor {
+    position: absolute;
+    border-width: 2px;
+    border-radius: 500px;
+    border-style: solid;
+    transform: rotate(-65deg);
+
+    &--1 {
+      top: 112px;
+      left: 28vw;
+    }
+
+    &--2 {
+      top: 485px;
+      left: 30vw;
+    }
+
+    &--3 {
+      top: 370px;
+      left: 5vw;
+    }
+
+    &--4 {
+      top: 519px;
+      left: 8vw;
+    }
+
+    &--5 {
+      top: 112px;
+      left: 15vw;
+    }
+
+    &--6 {
+      top: 321px;
+      left: 16vw;
+    }
+
+    &--7 {
+      top: 129px;
+      right: 8vw;
+    }
+
+    &--8 {
+      top: 540px;
+      right: 32vw;
+    }
+
+    &--9 {
+      top: 300px;
+      right: 5vw;
+    }
+
+    &--10 {
+      top: 402px;
+      right: 21vw;
+    }
+
+    &--11 {
+      top: 176px;
+      right: 13vw;
+    }
+
+    &--12 {
+      top: 486px;
+      right: 9vw;
+    }
+
+    &--small {
+      width: 45px;
+      height: 17px;
+    }
+
+    &--normal {
+      width: 85px;
+      height: 33px;
+    }
+
+    &--big {
+      width: 153px;
+      height: 60px;
+    }
+
+    &--yellow {
+      border-color: rgba(252, 195, 4, 0.5);
+    }
+
+    &--blue {
+      border-color: rgba(86, 204, 242, 0.5);
+    }
+
+    &--violet {
+      border-color: rgba(188, 4, 252, 0.5);
+    }
+
+    &--pink {
+      border-color: rgba(242, 86, 86, 0.5);
+    }
+
+    &--green {
+      border-color: rgba(3, 213, 66, 0.5);
+    }
+  }
+
+  @media (min-width: 1315px) {
+    &__decor {
+      &--yellow {
+        @include decorativeGradientOnHover($gradient-yellow);
+      }
+  
+      &--blue {
+        @include decorativeGradientOnHover($gradient-blue);
+      }
+  
+      &--violet {
+        @include decorativeGradientOnHover($gradient-violet);
+      }
+  
+      &--pink {
+        @include decorativeGradientOnHover($gradient-pink);
+      }
+  
+      &--green {
+        @include decorativeGradientOnHover($gradient-green);
+      }
+    }
+  }
+}
