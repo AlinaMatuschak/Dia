@@ -2,7 +2,7 @@
 - Stack: HTML5, SASS, JS, BEM methodology/
 - Fully responsive layout was made by using CSS Grid and Flexbox
 - All buttons and links are interactive
-- You could check [DEMO LINK](https://AlinaMatuschak.github.io/layout_dia/).
+- You could check [DEMO LINK](https://alinamatuschak.github.io/Dia/).
 - Design of layout you could see [here](https://www.figma.com/file/vhfzZ7SqWGkMGd5iCDdBCy/Dia-New?node-id=0%3A1)
   - Large screens 2560px
   - Full HD 1920px
